@@ -1,18 +1,67 @@
-*,
-*::before,
-*::after {
+/* 1. Box sizing */
+*, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
+
+/* 2. Margin reset — excludes dialogs */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable height keyword animations (for accordions etc.) */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* 4. Body defaults */
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Media element defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Form controls inherit font */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Prevent long strings breaking layout */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Smarter text wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* 9. Stacking context fix for React/Next.js */
+#root, #__next {
+  isolation: isolate;
+}
+
+/* ----------------------------------------
+ *    Base styles — built on top of the reset
+ *    ---------------------------------------- */
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   color: #333;
+  background-color: #fff;
 }
 
 h1 {
