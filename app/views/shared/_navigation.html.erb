@@ -1,0 +1,15 @@
+<% nav_links = [
+     ["Home", root_path],
+     ["About", about_path],
+] %>
+
+<nav class="site-nav" aria-label="Primary">
+  <ul>
+    <% nav_links.each do |label, path| %>
+      <li>
+        <%= link_to label, path,
+             "aria-current": ("page" if current_page?(path)) %>
+      </li>
+    <% end %>
+  <ul>
+<nav>
