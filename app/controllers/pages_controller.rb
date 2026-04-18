@@ -4,4 +4,13 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def posts
+  end
+
+  def hello_world
+  end
+
+  def rails_app
+  end
 end
