@@ -1,0 +1,6 @@
+<% content_for :title, "#{@post.title} - Clarke.io" %>
+<article>
+  <h1><%= @post.title %></h1>
+  <time><%= @post.published_at.to_date %></time>
+  <p><%= @post.body %></p>
+</article>
