@@ -28,6 +28,8 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
+# markdown files for posts committed to repository and then processed by build
+gem "kramdown"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
