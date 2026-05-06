@@ -8,14 +8,3 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 #
-Post.find_or_create_by!(slug: "hello-world") do |p|
-  p.title = "Hello World"
-  p.body = "This is my first post."
-  p.published_at = Time.zone.parse("2026-04-19")
-end
-
-Post.find_or_create_by!(slug: "rails-webapp") do |p|
-  p.title = "minimal website."
-  p.body = "A simple website built with Rails."
-  p.published_at = Time.zone.parse("2026-04-19")
-end
