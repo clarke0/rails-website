@@ -2,5 +2,5 @@
 <article>
   <h1><%= @post.title %></h1>
   <time><%= @post.published_at.to_date %></time>
-  <div><%= raw @post.body %></div>
+  <div><%= sanitize @post.body %></div>
 </article>
